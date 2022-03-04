@@ -30,7 +30,7 @@ public class Main {
     //оптимальный метод проверки
     private static boolean IsPalindrome1(String instr){
         //удаляем все символы кроме кроме буквенного, цифрового или знака подчёркивания
-        instr = instr.replaceAll("\\s", "");
+        instr = instr.replaceAll("\\s+", "");
 
         //инвертируем строку и сравниваем с первоначальной
         String instr2 = new StringBuilder(instr).reverse().toString();
