@@ -43,7 +43,7 @@ public class Main {
     private static boolean IsPalindrome2(String instr)    {
         boolean result = false;
         //удаляем все символы кроме кроме буквенного, цифрового или знака подчёркивания
-        instr = instr.replaceAll("\\s", "");
+        instr = instr.replaceAll("\\s+", "");
 
         //переводим все символы в нижний регистр
         instr = instr.toLowerCase();
