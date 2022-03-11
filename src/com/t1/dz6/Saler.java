@@ -24,8 +24,10 @@ public class Saler extends User{
             writer = new BufferedWriter(new FileWriter(this.FileName));
 
             for (Buyer buyer: buyers){
-                writer.write(buyer.toString());
-                writer.write(System.lineSeparator());
+                if (buyer.IsActive) { //записываем в файл только активных покупателей
+                    writer.write(buyer.toString());
+                    writer.write(System.lineSeparator());
+                }
             }
         }
         catch (IOException e) {
